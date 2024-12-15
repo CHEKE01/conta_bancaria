@@ -2,10 +2,9 @@ import { Conta } from '../model/Conta'
 import { ContaRepository } from '../repository/ContaRepository'
 
 export class ContaController implements ContaRepository {
-	// Coleção Array que vai armazenar os Objetos Conta
+
 	private listaContas = new Array<Conta>()
 
-	// Controlar os Números das Contas
 	public numero: number = 0
 
 	procurarPorNumero(numero: number): void {
@@ -52,8 +51,6 @@ export class ContaController implements ContaRepository {
 	): void {
 		throw new Error('Method not implemented.')
 	}
-
-	// Métodos Auxiliares
 
 	public gerarNumero(): number {
 		return ++this.numero

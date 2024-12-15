@@ -24,7 +24,6 @@ export class ContaCorrente extends Conta {
 		this._limite = value;
 	}
     
-    // Particularidade de Conta Corrente
     public sacar(valor: number): boolean{
         
         if(valor > (this.saldo + this._limite)){
