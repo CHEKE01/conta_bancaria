@@ -53,7 +53,8 @@ export function main() {
         console.log("            6 - Sacar                                ");
         console.log("            7 - Depositar                            ");
         console.log("            8 - Transferir valores entre Contas      ");
-        console.log("            9 - Sair                                 ");
+        console.log("            9 - Buscar Conta Por titular             ");
+        console.log("            0 - Sair                                 ");
         console.log("                                                     ");
         console.log("*****************************************************");
         console.log("                                                     ", 
@@ -165,26 +166,42 @@ export function main() {
                 console.log(colors.fg.whitestrong, 
                     "\n\nApagar uma Conta\n\n", colors.reset);
 
+                    console.log("Digite o número da conta:");
+                    numero = readlinesync.questionInt('');
+
+                    contas.deletar(numero)
+
                 keyPress()
                 break;
+
             case 6:
                 console.log(colors.fg.whitestrong, 
                     "\n\nSaque\n\n", colors.reset);
 
                 keyPress()
                 break;
+
             case 7:
                 console.log(colors.fg.whitestrong, 
                     "\n\nDepósito\n\n", colors.reset);
 
                 keyPress()
                 break;
+
             case 8:
                 console.log(colors.fg.whitestrong, 
                     "\n\nTransferência entre Contas\n\n", colors.reset);
 
                 keyPress()
                 break;
+
+            case 9:
+                console.log(colors.fg.whitestrong, 
+                    "\n\nTransferência entre Contas\n\n", colors.reset);
+    
+                keyPress()
+                break;
+
             default:
                 console.log(colors.fg.whitestrong, 
                     "\nOpção Inválida!\n", colors.reset);
